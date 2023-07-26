@@ -1,18 +1,17 @@
 #include "holberton.h"
 
 /**
- * free_data - frees data structure
- *
+ * free_data - frees data structures
  * @datash: data structure
  * Return: no return
  */
 void free_data(data_shell *datash)
 {
-	unsigned int i;
+	unsigned int k;
 
-	for (i = 0; datash->_environ[i]; i++)
+	for (k = 0; datash->_environ[k]; k++)
 	{
-		free(datash->_environ[i]);
+		free(datash->_environ[k]);
 	}
 
 	free(datash->_environ);
@@ -21,7 +20,6 @@ void free_data(data_shell *datash)
 
 /**
  * set_data - Initialize data structure
- *
  * @datash: data structure
  * @av: argument vector
  * Return: no return
